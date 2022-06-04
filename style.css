@@ -1,7 +1,12 @@
 /********************************* Сброс стилей базовых ******************************/
+html {
+	min-width: 1170px;
+}
+
 body {
 	margin: 0;
 	padding: 0;
+	min-width: 1170px;
 }
 * {
 	box-sizing: border-box;
@@ -120,9 +125,22 @@ a {
 	margin: 0 auto;
 }
 .cards {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	text-align: center;
+}
+.cards:after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 300px;
+	background-color: red;
+	z-index: -1;
+	background-color: #f3f3f3;
 }
 .title {
 	text-align: center;
@@ -149,22 +167,6 @@ a {
 	cursor: pointer;
 }
 
-
-
-
-
-
-
-/* Серый цвет */
-
-.gray {
-	min-width: 1200px;
-	width: 100%;
-	height: 50vh;
-	z-index: -100;
-	background-color: #f3f3f3;
-	margin-top: -310px;
-}
 
 /************************************ Gallery2 ***********************************/
 
